@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>🛒 Tu carrito - DreamWear</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>🛒 Tu carrito</h1>
+    <nav>
+      <a href="index.html">Volver a la tienda</a>
+      <a href="admin.html">Panel administrador</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="carrito-container">
+      <p>Tu carrito está vacío por ahora.</p>
+    </section>
+
+    <section id="resumen">
+      <h3>Total:</h3>
+      <p id="total">$0</p>
+      <button id="btnComprar" class="btn btn--primary btnFinalizarCompra">Finalizar compra</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DreamWear - Todos los derechos reservados.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/tienda.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

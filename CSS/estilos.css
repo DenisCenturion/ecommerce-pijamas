@@ -1,0 +1,265 @@
+.oculto {
+  display: none !important;
+}
+
+nav {
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3b3b3b;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #777;
+}
+
+main {
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 10px;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+/* Contenedor general de productos */
+#productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px; /* separación entre columnas y filas */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Tarjeta individual de producto */
+.producto-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto al pasar el mouse */
+.producto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Imagen de producto (si agrego más adelante) */
+.producto-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.btn-agregar:hover {
+  background-color: #0077aa;
+}
+
+
+.producto-card img {
+  width: 100%;
+  height: 220px; /* mismo alto para todas */
+  object-fit: contain; /* ya no recorta, mantiene toda la imagen */
+  display: block;
+  margin: 0 auto;
+  background-color: #f8f8f8; /* un fondo neutro si sobran bordes */
+  border-radius: 8px;
+  padding: 5px; /* opcional, separa la imagen del borde */
+}
+
+
+/* =======================
+   NUEVO SISTEMA DE BOTONES (BEM)
+   ======================= */
+
+/* Estilo base para todos los botones */
+.btn {
+  display: inline-block;
+  margin-top: 12px; /* separa del contenido anterior */
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 16px; /* un poco más visible */
+  font-weight: bold; /* mejora legibilidad */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-family: "Segoe UI", Arial, sans-serif; /* más moderna */
+}
+
+/* Pequeño efecto al presionar */
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Variante principal (botones de acción normal, azul) */
+.btn--primary {
+  background-color: #0099cc;
+}
+
+.btn--primary:hover {
+  background-color: #0077aa;
+}
+
+.btn--primary.btnFinalizarCompra {
+  background-color: rgb(45, 146, 20);
+}
+
+.btn--primary.btnFinalizarCompra:hover {
+  background-color: rgb(100, 170, 25);
+}
+
+.btn--primary.btnAgregarUnProducto {
+  background-color: rgb(38, 95, 170);
+}
+
+.btn--primary.btnAgregarUnProducto:hover {
+  background-color: rgb(11, 52, 107);
+}
+
+/* Variante de advertencia (por ejemplo: Editar) */
+.btn--warning {
+  background-color: #ffaa33;
+}
+
+.btn--warning:hover {
+  background-color: #e69500;
+}
+
+/* Variante de peligro (por ejemplo: Eliminar) */
+.btn--danger {
+  background-color: #cc3333;
+}
+
+.btn--danger:hover {
+  background-color: #aa2222;
+}
+
+/* Variante neutra (por ejemplo: Cancelar o Volver) */
+.btn--neutral {
+  background-color: #777;
+}
+
+.btn--neutral:hover {
+  background-color: #555;
+}
+
+/* =======================
+   TITULOS DE SECCIÓN (ADMIN / TIENDA)
+   ======================= */
+.titulo-seccion {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 20px auto;
+  width: fit-content; /* se ajusta al texto */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0.5px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* ====== CONTROL DE CANTIDAD EN CARRITO ====== */
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.cantidad-control .btnCantidad {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  background-color: #0099cc;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cantidad-control .btnCantidad:hover {
+  background-color: #0077aa;
+}
+
+.cantidad-control .btnCantidad:active {
+  transform: scale(0.95);
+}
+
+.cantidad-control .btnCantidad--menos {
+  background-color: #d6622c;
+}
+
+.cantidad-control .btnCantidad--menos:hover {
+  background-color: #94411b;
+}
+
+.cantidad-control .cantidad-numero {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  min-width: 24px;
+  text-align: center;
+}

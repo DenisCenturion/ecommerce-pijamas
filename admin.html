@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Administrador - Ecommerce Pijamas</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>🧑‍💼 Panel del Administrador</h1>
+    <nav>
+      <ul class="menu">
+        <li><button id="btnAlta">1. Dar de alta un producto</button></li>
+        <li><button id="btnVer">2. Ver todos los productos</button></li>
+        <li><button id="btnBuscar">3. Buscar un producto</button></li>
+        <li><button id="btnActualizar">4. Actualizar un producto</button></li>
+        <li><button id="btnEliminar">5. Eliminar un producto</button></li>
+        <form>
+          <li><button id="btnVolver" type="submit" formaction="index.html">6. Volver al menú principal</button></li>
+        </form>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="form-alta" class="oculto">
+      <h2>Dar de alta un producto</h2>
+      <form id="formProducto">
+        <label for="titulo">Titulo:</label>
+        <input type="text" id="titulo" required>
+
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" required>
+
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" required>
+
+        <label for="genero">Genero:</label>
+        <input type="text" id="genero" required>
+
+        <label for="cantidadDePiezas">Cantidad de piezas:</label>
+        <input type="number" id="cantidadDePiezas" required>
+
+        <label for="temporada">Temporada:</label>
+        <input type="text" id="temporada" required>
+
+        <label for="composicion">Composicion:</label>
+        <input type="text" id="composicion" required>
+
+        <label for="tipoParteSuperior">Tipo parte superior:</label>
+        <input type="text" id="tipoParteSuperior" required>
+
+        <label for="tipoManga">Tipo manga:</label>
+        <input type="text" id="tipoManga" required>
+
+        <label for="tipoParteInferior">Tipo parte inferior:</label>
+        <input type="text" id="tipoParteInferior" required>
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" required>
+
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" required>
+
+        <label for="talle">Talle:</label>
+        <input type="text" id="talle" required>
+
+        <label for="descripcion">Descripcion:</label>
+        <input type="text" id="descripcion" required>
+
+        <label for="image">Image:</label>
+        <input type="text" id="image">
+
+        <button type="submit" class="btn btn--primary btnAgregarUnProducto">Agregar producto</button>
+      </form>
+    </section>
+
+    <section id="form-buscar" class="oculto">
+      <h2 id="tituloBusqueda">Buscar producto</h2>
+      <form id="formBuscar">
+        <label for="busqueda">Título del producto:</label>
+        <input type="text" id="busqueda" placeholder="Ej: Pijama Mafalda" required>
+        <button type="submit" class="btn btn--primary">Buscar</button>
+      </form>
+    </section>
+
+    <section id="contenedor-resultado">
+      <!-- mostrar resultados como lista de productos, busqueda, etc. -->
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/classes.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/tienda.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
